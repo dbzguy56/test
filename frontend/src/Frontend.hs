@@ -28,11 +28,11 @@ import Common.Route
 frontend :: Frontend (R FrontendRoute)
 frontend = Frontend
   { _frontend_head = do
-      el "title" $ text "Obelisk Minimal Example"
+      el "title" $ text "Ayy lmaoObelisk Minimal Example"
       elAttr "script" ("type" =: "application/javascript" <> "src" =: $(static "lib.js")) blank
       elAttr "link" ("href" =: $(static "main.css") <> "type" =: "text/css" <> "rel" =: "stylesheet") blank
   , _frontend_body = do
-      el "h1" $ text "Welcome to Obelisk!"
+      el "h1" $ text "Ayy lmao Welcome to Obelisk!"
       el "p" $ text $ T.pack commonStuff
 
       -- `prerender` and `prerender_` let you choose a widget to run on the server
@@ -44,7 +44,7 @@ frontend = Frontend
         ^. js ("skeleton_lib" :: T.Text)
         ^. js1 ("log" :: T.Text) ("Hello, World!" :: T.Text)
 
-      elAttr "img" ("src" =: $(static "obelisk.jpg")) blank
+      -- elAttr "img" ("src" =: $(static "obelisk.jpg")) blank
       el "div" $ do
         let
           cfg = "common/example"
